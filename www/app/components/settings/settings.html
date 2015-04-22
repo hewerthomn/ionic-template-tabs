@@ -1,0 +1,29 @@
+<ion-view view-title="Settings">
+	<ion-content class="padding">
+
+		<h3>Settings</h3>
+		<hr>
+
+		<div class="list card">
+		  <label class="item item-input item-select">
+		    <div class="input-label">
+		      Option 1
+		    </div>
+		    <select ng-model="$storage.config.option1">
+		      <option value="0">Value 0</option>
+					<option value="1">Value 1</option>
+		    </select>
+		  </label>
+		</div>
+
+		<div class="list card">
+		  <div class="item item-checkbox">
+		     <label class="checkbox">
+		       <input type="checkbox" ng-model="$storage.config.option2">
+		     </label>
+		     Option 2
+		  </div>
+		</div>
+
+	</ion-content>
+</ion-view>
