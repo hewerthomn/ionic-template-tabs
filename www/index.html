@@ -11,34 +11,29 @@
 	  <script src="cordova.js"></script>
 	</head>
 	<body>
-	  <ion-pane>
-	  	<!-- Header  -->
-	    <ion-header-bar class="bar-stable">
-	      <h1 class="title" ui-sref="home" ui-sref-opts="{ reload: true, notify: true }">
-	        <img src="img/ionic.png" class="app-brand">
-	        AppName
-	      </h1>
-	      <button class="button button-clear" ui-sref="about"><i class="ion-information-circled"></i></button>
-	    </ion-header-bar>
-	  	<!-- Header  -->
 
-			<!-- Tabs -->
-	    <ion-tabs class="tabs-stable tabs-icon-only">
-	    	<!-- Home -->
-	      <ion-tab ui-sref="home" icon-on="ion-home positive" icon-off="ion-home">
-	        <ion-nav-view name="home"></ion-nav-view>
-	      </ion-tab>
-	    	<!-- Home -->
+		<ion-nav-bar class="bar-stable">
+			<ion-nav-back-button></ion-nav-back-button
+		</ion-nav-bar>
 
-	    	<!-- Settings -->
-	      <ion-tab ui-sref="settings" icon-on="ion-settings assertive" icon-off="ion-settings">
-	        <ion-nav-view name="settings"></ion-nav-view>
-	      </ion-tab>
-	    	<!-- Settings -->
-	    </ion-tabs>
-			<!-- Tabs -->
+    <ion-nav-view></ion-nav-view>
 
-	    <ion-nav-view></ion-nav-view>
-	  </ion-pane>
+    <ion-tabs class="tabs-positive tabs-icon-only">
+			<!-- Home -->
+		  <ion-tab ui-sref="home" icon="ion-home" badge="2" badge-style="badge-assertive">
+		    <ion-nav-view name="home"></ion-nav-view>
+		  </ion-tab>
+
+			<!-- Settings -->
+		  <ion-tab ui-sref="settings" icon="ion-settings">
+		    <ion-nav-view name="settings"></ion-nav-view>
+		  </ion-tab>
+
+			<!-- About -->
+		  <ion-tab ui-sref="about" icon="ion-information-circled">
+		    <ion-nav-view name="about"></ion-nav-view>
+		  </ion-tab>
+		</ion-tabs>
+
 	</body>
 </html>
