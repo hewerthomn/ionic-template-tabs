@@ -9,7 +9,7 @@ function appConfig($provide, $ionicConfigProvider) {
 	// 	};
 	// });
 
-	$ionicConfigProvider.tabs.position('bottom');
+	// $ionicConfigProvider.tabs.position('bottom');
 };
 
 angular

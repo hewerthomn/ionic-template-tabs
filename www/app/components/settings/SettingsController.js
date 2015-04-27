@@ -2,7 +2,7 @@
 /**
  * Config Controller
  */
-function ConfigController($scope, $localStorage) {
+function SettingsController($scope, $localStorage) {
 
 	function _init()
 	{
@@ -14,4 +14,4 @@ function ConfigController($scope, $localStorage) {
 
 angular
 	.module('app')
-	.controller('ConfigController', ConfigController);
+	.controller('SettingsController', SettingsController);

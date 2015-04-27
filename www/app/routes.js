@@ -5,22 +5,32 @@
 function routeConfig($stateProvider, $urlRouterProvider) {
 
 	$stateProvider
-		.state('about', {
-			url: '/about',
-			templateUrl: 'app/components/about/about.html'
+		.state('tabs', {
+			url: '/tabs',
+			abstract: true,
+			controller: 'TabsController',
+			templateUrl: 'app/components/tabs/tabs.html'
 		})
-		.state('home', {
+		.state('tabs.home', {
 			url: '/home',
-			controller: 'HomeController',
-			templateUrl: 'app/components/home/home.html'
+			views: {
+				'tabs.home': {
+					controller: 'HomeController',
+					templateUrl: 'app/components/home/home.html'
+				}
+			}
 		})
-		.state('settings', {
+		.state('tabs.settings', {
 			url: '/settings',
-			controller: 'ConfigController',
-			templateUrl: 'app/components/settings/settings.html'
+			views: {
+				'tabs.settings': {
+					controller: 'SettingsController',
+					templateUrl: 'app/components/settings/settings.html'
+				}
+			}
 		});
 
-	$urlRouterProvider.otherwise('home');
+	$urlRouterProvider.otherwise('/tabs/home');
 };
 
 angular
