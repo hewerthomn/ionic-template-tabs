@@ -1,17 +1,20 @@
-'use strict';
-/**
- * Tabs Controller
- */
-function TabsController ($scope)
-{
-	function _init()
+(function(angular, undefined) {
+	'use strict';
+
+	/**
+	 * Tabs Controller
+	 */
+	angular
+		.module('app')
+		.controller('TabsController', TabsController);
+
+	function TabsController ($scope)
 	{
-		$scope.homeNotifications = 3;
-	};
+		function _init() {
+			$scope.homeNotifications = 3;
+		}
 
-	_init();
-};
+		_init();
+	}
 
-angular
-	.module('app')
-	.controller('TabsController', TabsController);
+})(window.angular);
