@@ -1,9 +1,13 @@
 <ion-view view-title="Settings">
-	<ion-content>
-		<div class="card padding">
-			{{ $storage.config | json }}
-		</div>
+	<ion-nav-bar class="bar-stable">
+		<ion-nav-back-button></ion-nav-back-button>
+	</ion-nav-bar>
 
+	<ion-nav-title ui-sref="tabs.home">
+		<img class="app-brand" src="img/ionic.png"> Settings
+	</ion-nav-title>
+
+	<ion-content>
 		<div class="card">
 		  <label class="item item-input item-select">
 		    <div class="input-label">
