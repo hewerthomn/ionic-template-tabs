@@ -89,14 +89,33 @@
 
 			watch: {
 				min: {
-					files: ['Gruntfile.js', 'www/app/**/*.js', 'www/css/**/*.css'],
-					tasks: ['concat:app', 'concat_css', 'jshint'],
+					files: ['Gruntfile.js', 'www/app/**/*.js'],
+					tasks: ['concat:app', 'jshint'],
+					options: {
+						atBegin: true
+					}
+				},
+
+				css: {
+					files: ['www/css/**/*.css'],
+					tasks: ['concat_css'],
 					options: {
 						atBegin: true
 					}
 				}
-			}
+			},
+
+			notify_hooks: {
+		    options: {
+		      enabled: true,
+		      success: true,
+		      max_jshint_notifications: 5
+		    }
+		  }
 		});
+
+		grunt.loadNpmTasks('grunt-notify');
+		grunt.task.run('notify_hooks');
 
 		grunt.registerTask('dev', ['concat', 'concat_css']);
 		grunt.registerTask('default', ['concat', 'concat_css', 'cssmin', 'copy']);
