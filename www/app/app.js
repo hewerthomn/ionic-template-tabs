@@ -7,6 +7,7 @@
 	angular.module('app', [
 		'ionic',
 		'ui.router',
+		'ngTouch',
 		'ngStorage',
 		'ngCordova'
 	]);
