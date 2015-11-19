@@ -18,10 +18,10 @@
 						'www/lib/angular-sanitize/angular-sanitize.min.js',
 						'www/lib/angular-touch/angular-touch.min.js',
 						'www/lib/angular-ui-router/release/angular-ui-router.min.js',
-						'www/lib/ionic/js/ionic.min.js',
-						'www/lib/ionic/js/ionic-angular.min.js',
-						'www/lib/ngCordova/dist/ng-cordova.min.js',
 						'www/lib/ngstorage/ngStorage.min.js',
+						'www/lib/ionic/release/js/ionic.min.js',
+						'www/lib/ionic/release/js/ionic-angular.min.js',
+						'www/lib/ngCordova/dist/ng-cordova.min.js',
 
 						'www/app/app.js',
 						'www/app/config.js',
@@ -58,7 +58,7 @@
 					files: [{
 						expand: true,
 						flatten: true,
-						src: ['www/lib/ionic/fonts/**.*'],
+						src: ['www/lib/ionic/release/fonts/**.*'],
 						dest: 'www/build/fonts'
 					}]
 				}
@@ -69,7 +69,7 @@
 				app: {
 					dest: 'www/build/css/app.min.css',
 					src: [
-						'www/lib/ionic/css/ionic.min.css',
+						'www/lib/ionic/release/css/ionic.min.css',
 						'www/css/app.css'
 					]
 				}
