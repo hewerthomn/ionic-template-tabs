@@ -8,6 +8,8 @@
 		.module('app')
 		.run(runConfig);
 
+	runConfig.$inject = ['$ionicPlatform'];
+
 	function runConfig($ionicPlatform) {
 
 		$ionicPlatform.ready(function() {

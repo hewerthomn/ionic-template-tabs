@@ -8,6 +8,8 @@
 		.module('app')
 		.config(routeConfig);
 
+	routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+
 	function routeConfig($stateProvider, $urlRouterProvider) {
 
 		$stateProvider

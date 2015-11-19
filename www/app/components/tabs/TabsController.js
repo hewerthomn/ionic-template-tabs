@@ -8,8 +8,10 @@
 		.module('app')
 		.controller('TabsController', TabsController);
 
-	function TabsController ($scope)
-	{
+	TabsController.$inject = ['$scope'];
+
+	function TabsController ($scope) {
+
 		function _init() {
 			$scope.homeNotifications = 3;
 		}

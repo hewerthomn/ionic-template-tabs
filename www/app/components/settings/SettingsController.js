@@ -8,6 +8,8 @@
 		.module('app')
 		.controller('SettingsController', SettingsController);
 
+	SettingsController.$inject = ['$scope', '$localStorage'];
+
 	function SettingsController($scope, $localStorage) {
 
 		function _init() {

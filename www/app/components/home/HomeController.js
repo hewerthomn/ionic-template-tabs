@@ -8,8 +8,10 @@
 		.module('app')
 		.controller('HomeController', HomeController);
 
-	function HomeController($scope, $localStorage)
-	{
+	HomeController.$inject = ['$scope', '$localStorage'];
+
+	function HomeController($scope, $localStorage) {
+
 		function _init() {
 			$scope.$storage  = $localStorage;
 		}
